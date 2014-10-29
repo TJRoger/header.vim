@@ -3,7 +3,7 @@ vim-autoHeader
 
 auto add header to your file when creating file with vim
 ##result
-`
+```
 //
 //  test.c
 //  rpassword
@@ -13,10 +13,10 @@ auto add header to your file when creating file with vim
 //
 //  Description: 
 //
-`
+```
 ##code
 add the code to your `~/.vimrc`
-`
+```
 "copyright add authomatically
 "add or update the header
 autocmd BufNewFile *.c exec ":call AddHeader()"
@@ -36,4 +36,4 @@ function AddHeader()
     call append(8, "//")
     echohl WarningMsg | echo "Succeeded in adding copyright." | echohl None
 endfunction
-`
+```
