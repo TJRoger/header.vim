@@ -9,7 +9,7 @@ auto add header to your file when creating file with vim
 //  rpassword
 //
 //  Created by Roger (ExampleEmail@gmail.com) on 10/29/14.
-//  Copyright (c) 2014 ExampleWebsit.ecom. All rights reserved.
+//  Copyright (c) 2014 ExampleWebsite.com. All rights reserved.
 //
 //  Description: 
 //
