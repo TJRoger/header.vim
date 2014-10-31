@@ -1,12 +1,13 @@
 vim-autoHeader
 ==============
 
-auto add header to your file when creating file with vim
+auto add header to your file when creating file with vim.
+auto include the current directory as your project name
 ##result
 ```
 //
 //  test.c
-//  rpassword
+//  project name
 //
 //  Created by Roger (ExampleEmail@gmail.com) on 10/29/14.
 //  Copyright (c) 2014 ExampleWebsite.com. All rights reserved.
