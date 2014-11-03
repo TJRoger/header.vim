@@ -9,7 +9,7 @@ auto include the current directory as your project name
 //  test.c
 //  project name
 //
-//  Created by Roger (ExampleEmail@gmail.com) on 10/29/14.
+//  Created by Roger (tjrogertj@gmail.com) on 10/29/14.
 //  Copyright (c) 2014 ExampleWebsite.com. All rights reserved.
 //
 //  Description: 
@@ -30,7 +30,7 @@ function AddHeader()
     call append(1, "//  ".expand("%:t"))
     call append(2, "//  ".fnamemodify(getcwd(), ':t'))
     call append(3, "//")
-    call append(4, "//  Created by Roger (ExampleEmail@gmail.com) on ".strftime("%m/%d/%y").".")
+    call append(4, "//  Created by Roger (tjrogertj@gmail.com) on ".strftime("%m/%d/%y").".")
     call append(5, "//  Copyright (c) ".strftime("%Y")." ExampleWebsite.com. All rights reserved.")
     call append(6, "//")
     call append(7, "//  Description: ")
