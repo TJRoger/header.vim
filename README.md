@@ -1,9 +1,10 @@
-vim-autoHeader
+header.vim
 ==============
 
 auto add header to your file when creating file with vim.
 auto include the current directory as your project name
-##result
+
+## Result
 ```
 //
 //  test.c
@@ -15,10 +16,11 @@ auto include the current directory as your project name
 //  Description: 
 //
 ```
-##code
+
+## Code
 add the code to your `~/.vimrc`
 ```
-"copyright add authomatically
+"add copyright automatically
 "add or update the header
 autocmd BufNewFile *.c exec ":call AddHeader()"
 autocmd BufNewFile *.h exec ":call AddHeader()"
