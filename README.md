@@ -6,37 +6,49 @@ auto include the current directory as your project name
 
 ## Result
 ```
-//
-//  test.c
-//  project name
-//
-//  Created by Roger (tjrogertj@gmail.com) on 10/29/14.
-//  Copyright (c) 2014 ExampleWebsite.com. All rights reserved.
-//
-//  Description: 
-//
+<?php
+/***************************************************************************
+ Copyright © 2020 rogerluo. All rights reserved.
+ **************************************************************************/
+
+/**
+ * File: test.php
+ * Author: rogerluo[tjrogertj@gmail.com]
+ * Created At: 2020-04-29 22:42:39
+ * desc:
+ */
+/* vim: set ts=4 sw=4 sts=4 tw=100 */
+
+```
+```
+#!/bin/bash
+
+###########################################################################
+# Copyright © 2020 rogerluo. All rights reserved.
+###########################################################################
+# Author: rogerluo[tjrogertj@gmail.com]
+# Created At: 2020-04-29 22:49:51
+# File: test.sh
+# desc:
+# vim: set ts=4 sw=4 sts=4 tw=100
+
 ```
 
-## Code
-add the code to your `~/.vimrc`
 ```
-"add copyright automatically
-"add or update the header
-autocmd BufNewFile *.c exec ":call AddHeader()"
-autocmd BufNewFile *.h exec ":call AddHeader()"
-autocmd BufNewFile *.m exec ":call AddHeader()"
-autocmd BufNewFile *.js exec ":call AddHeader()"
-map <F4> :call AddHeader()<cr>'s
-function AddHeader()
-    call append(0, "//")
-    call append(1, "//  ".expand("%:t"))
-    call append(2, "//  ".fnamemodify(getcwd(), ':t'))
-    call append(3, "//")
-    call append(4, "//  Created by Roger (tjrogertj@gmail.com) on ".strftime("%m/%d/%y").".")
-    call append(5, "//  Copyright (c) ".strftime("%Y")." ExampleWebsite.com. All rights reserved.")
-    call append(6, "//")
-    call append(7, "//  Description: ")
-    call append(8, "//")
-    echohl WarningMsg | echo "Succeeded in adding copyright." | echohl None
-endfunction
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+###########################################################################
+# Copyright © 2020 rogerluo. All rights reserved.
+###########################################################################
+# Author: rogerluo[tjrogertj@gmail.com]
+# Created At: 2020-04-29 22:51:17
+# File: test.py
+# desc:
+# vim: set ts=4 sw=4 sts=4 tw=100
+
 ```
+
+## Installation
+
+run command  
+`$ curl -fsL -o ~/.vim/plugin/header.vim https://raw.githubusercontent.com/TJRoger/header.vim/master/header.vim`
