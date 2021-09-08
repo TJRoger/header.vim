@@ -1,10 +1,11 @@
 header.vim
 ==============
 
-auto add header to your file when creating file with vim.
-auto include the current directory as your project name
+- Add header to the source file when creating file with vim automatically.
+- shell/java/python/go/php/c# source support
 
-## Result
+## Guide
+run command `vim test.php`, then you will get  
 ```
 <?php
 /***************************************************************************

@@ -129,7 +129,7 @@ func! SetHeader()
     elseif &filetype == 'sh' || &filetype == 'python'
         if &filetype == 'sh'
             call setline(1, "\#!/bin/bash")
-            call append(1, "")
+            call append(1, "\# coding: utf-8")
         else
             call setline(1, "\#!/usr/bin/env python3")
             call append(1, "\# -*- coding: utf-8 -*-")
@@ -140,8 +140,8 @@ func! SetHeader()
         call append(5, Author())
         call append(6, CreatedAt())
         call append(7, File())
-        call append(8, Description()))
-        call append(9, VimSettings())
+        call append(8, Description())
+        call append(9, VimSetting())
         call append(10,"")
     endif
 endfunc
