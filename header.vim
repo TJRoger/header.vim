@@ -1,5 +1,5 @@
 "set header automatically
-autocmd BufNewFile *.sh,*.java,*.py,*.go,*.php,*.cs exec ":call SetHeader()"
+autocmd BufNewFile *.swift,*.sh,*.java,*.py,*.go,*.php,*.cs exec ":call SetHeader()"
 "Go to the end line of the new document
 autocmd BufNewFile * normal G
 
@@ -105,13 +105,15 @@ endfunc
 
 "SetHeader definition, add header to file automatically
 func! SetHeader()
-    if &filetype == 'php' || &filetype == 'go' || &filetype == 'java' || &filetype == 'cs'
+    if &filetype == 'php' || &filetype == 'go' || &filetype == 'java' || &filetype == 'cs' || &filetype == 'swift'
         if &filetype == 'php'
             call setline(1, "<?php")
         elseif &filetype == 'go'
             call setline(1, "")
         elseif &filetype == 'java'
             call setline(1, "")
+        elseif &filetype == 'swift'
+            call setline(1, "\#!/usr/bin/swift")
         endif
         call append(1, "/***************************************************************************")
         call append(2, " ".<SID>GetCopyright())
