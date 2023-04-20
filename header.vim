@@ -1,5 +1,5 @@
 "set header automatically
-autocmd BufNewFile *.swift,*.sh,*.java,*.py,*.go,*.php,*.cs exec ":call SetHeader()"
+autocmd BufNewFile *.swift,*.sh,*.java,*.py,*.go,*.php,*.cs,*.rb exec ":call SetHeader()"
 "Go to the end line of the new document
 autocmd BufNewFile * normal G
 
@@ -128,13 +128,16 @@ func! SetHeader()
         call append(11, "/* ".<SID>VimSetting()." */")
         call append(12, "")
         "filetype sh
-    elseif &filetype == 'sh' || &filetype == 'python'
+    elseif &filetype == 'sh' || &filetype == 'python' || &filetype == 'ruby'
         if &filetype == 'sh'
             call setline(1, "\#!/bin/bash")
-            call append(1, "\# coding: utf-8")
+            call append(1, "\# encoding: utf-8")
+        elseif &filetype == 'ruby'
+            call setline(1, "\#!/usr/bin/ruby")
+            call append(1, "\# -*- encoding: utf-8 -*-")
         else
             call setline(1, "\#!/usr/bin/env python3")
-            call append(1, "\# -*- coding: utf-8 -*-")
+            call append(1, "\# -*- encoding: utf-8 -*-")
         endif
         call append(2, StarLine())
         call append(3, Copyright())
